@@ -1,3 +1,6 @@
 [submodule "roles/coreos-toolboxrc"]
 	path = roles/coreos-toolboxrc
 	url = https://github.com/ximenpo/ansible-role-coreos-toolboxrc.git
+[submodule "vagrant/coreos"]
+	path = vagrant/coreos
+	url = https://github.com/coreos/coreos-vagrant
