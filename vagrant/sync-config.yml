@@ -1,0 +1,21 @@
+---
+
+- name: generate
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name:       generate vagrant.ssh_config
+      connection: local
+      raw:        'cd coreos;vagrant ssh-config > ../vagrant.ssh_config'
+    - name:       download dynamic inventory source code
+      connection: local
+      get_url:
+        url:      'https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ssh_config.py'
+        dest:     ./inventory.py
+        mode:     0551
+    - name:       replace ssh config file's path
+      replace: 
+        dest:     ./inventory.py
+        regexp:   '~/\.ssh/config'
+        replace:  './vagrant.ssh_config'
+        backup:   no
