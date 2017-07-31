@@ -4,3 +4,6 @@
 [submodule "vagrant/coreos"]
 	path = vagrant/coreos
 	url = https://github.com/coreos/coreos-vagrant
+[submodule "roles/coreos-copy"]
+	path = roles/coreos-copy
+	url = https://github.com/ximenpo/ansible-role-coreos-copy.git
