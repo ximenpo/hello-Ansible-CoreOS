@@ -1,0 +1,44 @@
+---
+
+- name: generate .toolboxrc
+  hosts: all
+  gather_facts: false
+  roles:
+    - role: coreos-toolboxrc
+      toolbox_image_name: python
+      toolbox_image_tag: alpine
+      toolbox_image_import_from_docker: true
+
+- name: sync /etc/docker/daemon.json for docker's registry mirror
+  hosts: all
+  gather_facts: false
+  become: true
+  become_method: sudo
+  tasks:
+    - raw:            mkdir -p /etc/docker
+    - synchronize:
+        src:          files/docker/daemon.json
+        dest:         /etc/docker/daemon.json
+
+- name: sync /opt/bin/python3
+  hosts: all
+  gather_facts: false
+  become: true
+  become_method: sudo
+  tasks:
+    - raw:            mkdir -p /opt/bin
+    - synchronize:
+        src:          files/python/python.sh
+        dest:         /opt/bin/python3
+    - raw:            chmod 755 /opt/bin/python3;chown root:root /opt/bin/python3;
+
+- name: copy README.md to destination (we can use python modules now...)
+  hosts: all
+  gather_facts: false
+  environment:
+    PATH:             /usr/bin:/bin:/usr/sbin:/sbin:/opt/bin
+  tasks:
+    - copy:
+        src:          ./README.md
+        dest:         ~/README.md
+
