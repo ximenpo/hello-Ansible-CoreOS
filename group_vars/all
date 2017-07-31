@@ -1,2 +1,3 @@
 
 ansible_python_interpreter: python3
+coreos_path_env:            /usr/bin:/bin:/usr/sbin:/sbin:/opt/bin

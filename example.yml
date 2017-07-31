@@ -36,7 +36,7 @@
   hosts: all
   gather_facts: false
   environment:
-    PATH:             /usr/bin:/bin:/usr/sbin:/sbin:/opt/bin
+    PATH:             "{{coreos_path_env}}"
   tasks:
     - copy:
         src:          ./README.md
