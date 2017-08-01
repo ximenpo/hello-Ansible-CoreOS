@@ -1,2 +1,2 @@
 #!/bin/bash
-toolbox --bind=/home:/home python3 "$@"
+toolbox -q --bind=/home:/home python3 "$@"
