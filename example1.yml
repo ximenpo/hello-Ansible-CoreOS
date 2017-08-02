@@ -35,8 +35,8 @@
 - name: copy README.md to destination (we can use python modules now...)
   hosts: all
   gather_facts: false
-  environment:
-    PATH:             "{{coreos_path_env}}"
+  environment:        # !!! need /opt/bin PATH env.
+    PATH:             "/usr/bin:/bin:/usr/sbin:/sbin:/opt/bin"
   tasks:
     - copy:
         src:          ./README.md

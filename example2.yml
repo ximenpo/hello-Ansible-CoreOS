@@ -39,4 +39,4 @@
     - role:   coreos-copy
       src:    ./README.md
       dest:   ~/README.md
-      run_in_toolbox: yes
+      run_in_toolbox: yes     # !!! need run_in_toolbox to use /opt/bin PATH env.
