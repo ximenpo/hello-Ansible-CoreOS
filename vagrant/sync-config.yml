@@ -4,12 +4,11 @@
   hosts: localhost
   gather_facts:   false
   run_once:       true
+  connection:     local
   tasks:
     - name:       generate vagrant.ssh_config
-      connection: local
       raw:        'cd coreos;vagrant ssh-config > ../vagrant.ssh_config'
     - name:       download dynamic inventory source code
-      connection: local
       get_url:
         url:      'https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ssh_config.py'
         dest:     ./inventory.py
