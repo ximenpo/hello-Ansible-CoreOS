@@ -10,6 +10,9 @@
 需要配置的几个点：
 
 1.  group_vars/all  中设置 ansible_python_interpreter: python3
-2.  需要用到python模块的调用，在play层级设置environment变量PATH，增加/opt/bin路径
+2.  需要用到python模块的调用，有如下几种方式：
+    -   在play层级设置environment变量PATH，增加/opt/bin路径，参考 example1.yml
+    -   使用ximenpo.coreos-copy角色，设置 run_in_toolbox 变量，不需设置environment变量PATH
+    -   在~/.bashrc中设置PATH变量包含python路径，支持系统模块
 
-具体可参考 example.yml 脚本。
+具体可参考 example[1-3].yml 脚本。
