@@ -4,7 +4,7 @@
   hosts: all
   gather_facts: false
   roles:
-    - role: coreos-toolboxrc
+    - role: ximenpo.coreos-toolboxrc
       toolbox_image_name: python
       toolbox_image_tag: alpine
       toolbox_image_import_from_docker: true

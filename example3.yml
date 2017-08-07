@@ -5,12 +5,12 @@
   gather_facts: false
   roles:
     - name: generate .toolboxrc
-      role: coreos-toolboxrc
+      role:   ximenpo.coreos-toolboxrc
       toolbox_image_name: python
       toolbox_image_tag: alpine
       toolbox_image_import_from_docker: true
     - name: sync ~/.bashrc
-      role:   coreos-copy
+      role:   ximenpo.coreos-copy
       src:    files/home/bashrc
       dest:   ~/.bashrc
       mode:   '644'
@@ -21,12 +21,12 @@
   become: true
   become_method: sudo
   roles:
-    - name:   conf for docker's registry mirror
-      role:   coreos-copy
+    - name: conf for docker's registry mirror
+      role:   ximenpo.coreos-copy
       src:    files/docker/daemon.json
       dest:   /etc/docker/daemon.json
-    - name:   script for python3
-      role:   coreos-copy
+    - name: script for python3
+      role:   ximenpo.coreos-copy
       src:    files/python/python.sh
       dest:   /opt/bin/python3
       mode:   '755'
