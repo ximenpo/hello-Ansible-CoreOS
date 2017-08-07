@@ -1,9 +1,9 @@
-[submodule "roles/coreos-toolboxrc"]
-	path = roles/coreos-toolboxrc
-	url = https://github.com/ximenpo/ansible-role-coreos-toolboxrc.git
 [submodule "vagrant/coreos"]
 	path = vagrant/coreos
 	url = https://github.com/coreos/coreos-vagrant
-[submodule "roles/coreos-copy"]
-	path = roles/coreos-copy
+[submodule "roles/ximenpo.coreos-copy"]
+	path = roles/ximenpo.coreos-copy
 	url = https://github.com/ximenpo/ansible-role-coreos-copy.git
+[submodule "roles/ximenpo.coreos-toolboxrc"]
+	path = roles/ximenpo.coreos-toolboxrc
+	url = https://github.com/ximenpo/ansible-role-coreos-toolboxrc.git
