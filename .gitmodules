@@ -7,3 +7,6 @@
 [submodule "roles/ximenpo.coreos-toolboxrc"]
 	path = roles/ximenpo.coreos-toolboxrc
 	url = https://github.com/ximenpo/ansible-role-coreos-toolboxrc.git
+[submodule "roles/ximenpo.coreos-pypy"]
+	path = roles/ximenpo.coreos-pypy
+	url = https://github.com/ximenpo/ansible-role-coreos-pypy.git
