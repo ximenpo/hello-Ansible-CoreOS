@@ -10,3 +10,6 @@
 [submodule "roles/ximenpo.coreos-pypy"]
 	path = roles/ximenpo.coreos-pypy
 	url = https://github.com/ximenpo/ansible-role-coreos-pypy.git
+[submodule "roles/ximenpo.coreos-cloudinit"]
+	path = roles/ximenpo.coreos-cloudinit
+	url = https://github.com/ximenpo/ansible-role-coreos-cloudinit.git
