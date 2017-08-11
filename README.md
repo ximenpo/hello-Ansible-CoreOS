@@ -30,3 +30,9 @@
 3.  调用系统 copy 模块进行文件复制测试
 
 具体参考 example4.yml 。
+
+# coreos-cloudinit 调用封装
+
+封装了coreos-cloudinit的所有参数，并额外提供了 `from_file_path`/`from_file_template`/`from_file_content` 方式从本地生成初始化脚本
+
+具体参考 example5.yml 。

@@ -1,0 +1,18 @@
+---
+
+- hosts: all
+  gather_facts: false
+  roles:
+    - name: init from local files.
+      role:   ximenpo.coreos-cloudinit
+      from_file_path: files/cloudinit/cloud-config.yml
+
+    - name: init from content text.
+      role:   ximenpo.coreos-cloudinit
+      from_file_content: |
+        #cloud-config
+        hostname: xxx.vpn.local
+      
+    # - name: init from remote file.
+    #   role:   ximenpo.coreos-cloudinit
+    #   from_file:  "/home/core/local-config.yml"
