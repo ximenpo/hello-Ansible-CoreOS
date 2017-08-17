@@ -5,9 +5,9 @@
   gather_facts: false
   roles:
     - role: ximenpo.coreos-toolboxrc
-      toolbox_image_name: python
-      toolbox_image_tag: alpine
-      toolbox_image_import_from_docker: true
+      toolboxrc_image_name: python
+      toolboxrc_image_tag: alpine
+      toolboxrc_image_import_from_docker: true
 
 - name: sync /etc/docker/daemon.json for docker's registry mirror
   hosts: all

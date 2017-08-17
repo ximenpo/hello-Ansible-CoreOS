@@ -10,8 +10,8 @@
       role:   ximenpo.coreos-pypy
       #pypy_version: 5.8.1
       #python_version: 3.5
-      wget_url: '~core/pypy-5.8-1-linux_x86_64-portable.tar.bz2.1'
-      wget_env: SOCKS_SERVER=172.17.8.1:1080
+      #pypy_wget_url: '~core/pypy-5.8-1-linux_x86_64-portable.tar.bz2'
+      pypy_wget_env: SOCKS_SERVER=172.17.8.1:1080
 
 - name: generate pypy env.
   hosts: all
